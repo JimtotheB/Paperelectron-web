@@ -25,6 +25,6 @@ ADD paper-web.sh /etc/service/paper-web/run
 
 EXPOSE 8080
 
-RUN npm install -g littoral
+RUN npm install -g git+https://git@github.com:PaperElectron/Paperelectron-web.git
 
 CMD ["/sbin/my_init"]

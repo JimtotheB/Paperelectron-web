@@ -11,6 +11,10 @@
     "type": "git",
     "url": "https://github.com/PaperElectron/Paperelectron-web.git"
   },
+  "preferGlobal": true,
+  "bin": {
+    "paper-web": "cli/paper-web.js"
+  },
   "keywords": [
     "Website"
   ],
