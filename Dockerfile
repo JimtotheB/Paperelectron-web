@@ -4,6 +4,7 @@ FROM phusion/baseimage:0.9.16
 
 RUN apt-get update && apt-get -y install \
   build-essential \
+  git \
   curl
 
 RUN curl -s https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - && \
