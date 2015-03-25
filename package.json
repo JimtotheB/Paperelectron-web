@@ -1,0 +1,32 @@
+{
+  "name": "Paperelectron-web",
+  "version": "0.0.0",
+  "description": "Paperelectron.com website.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaperElectron/Paperelectron-web.git"
+  },
+  "keywords": [
+    "Website"
+  ],
+  "author": "Jim <monstertke@paperelectron.com> (http://paperelectron.com/)",
+  "license": "Copyright 2015 Jim Bulkowski ",
+  "bugs": {
+    "url": "https://github.com/PaperElectron/Paperelectron-web/issues"
+  },
+  "homepage": "https://github.com/PaperElectron/Paperelectron-web",
+  "dependencies": {
+    "compression": "^1.4.3",
+    "express": "^4.12.3",
+    "jade": "^1.9.2",
+    "morgan": "^1.5.2",
+    "response-time": "^2.3.0",
+    "serve-favicon": "^2.2.0",
+    "serve-static": "^1.9.2"
+  }
+}

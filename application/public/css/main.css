@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'cabinbold';
+    src: url('/fonts/Cabin-Bold-webfont.eot');
+    src: url('/fonts/Cabin-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Cabin-Bold-webfont.woff2') format('woff2'),
+    url('/fonts/Cabin-Bold-webfont.woff') format('woff'),
+    url('/fonts/Cabin-Bold-webfont.ttf') format('truetype'),
+    url('/fonts/Cabin-Bold-webfont.svg#cabinbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.row.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+#hero-section {
+    background-color: rgb(15, 113, 102);
+    background: url(/images/squares.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+    text-align: left;
+    position: relative;
+    padding: 100px 20px 0 20px;
+}
+
+#hero-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /*background: url(/images/felt.png);*/
+    /*background: url(/images/denim.png);*/
+    background: url(/images/orchid.png);
+    opacity: .6;
+}
+
+#hero-section h1 {
+    font-size: 5em;
+    color: #fff;
+    font-weight: 500;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    line-height: 100%;
+    font-family: "cabinbold";
+}
+
+#hero-section a {
+    color: #fff;
+    text-shadow: black -1px -1px 1px;
+}
+#hero-section a:hover {
+    color: #4a9999;
+    text-shadow: black -1px -1px 1px;
+}
+
+#hero-section h4 {
+    font-size: 1.35em;
+    color: #fff;
+    font-weight: 300;
+}
+
+#hero-section h3 {
+    color: #fff;
+}
+
+#hero-section .logo img {
+    max-width: 100%;
+    position: absolute;
+    right: 100px;
+    top: 50px;
+}
+
+#software-section {
+    background-color: rgb(15, 113, 102);
+    background: url(/images/code.png);
+    background-size: contain;
+    background-position: center;
+    min-height: 650px;
+    text-align: left;
+    position: relative;
+    padding: 100px 20px 20px 20px;
+}
+
+#consulting-section {
+    background-color: rgb(15, 113, 102);
+    background: url(/images/collision.png);
+    background-size: cover;
+    background-position: center;
+    min-height: 650px;
+    text-align: left;
+    position: relative;
+    padding: 100px 20px 20px 20px;
+}
+#consulting-section h1 {
+    color: #fff;
+}
+#software-section h1 {
+    color: #fff;
+}
+section .panel {
+    background-color: rgba(255,255,255, 0.9);
+}
+
+@media only screen and (max-width: 64em) {
+    #hero-section {
+        padding: 0px 5px 30px 5px;
+    }
+    #hero-section h1 {
+        font-size: 50px;
+    }
+    #hero-section h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #hero-section {
+        height: 300px;
+    }
+    #hero-section .logo img {
+        width: 280px;
+        top: 0px;
+        right: 40px;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 40em) {
+    #hero-section {
+        height: 500px;
+    }
+    #hero-section h1, h3, h4 {
+        text-align: center;
+    }
+    #hero-section .logo img {
+        width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        right: 0px;
+        bottom: 0px;
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
