@@ -7,8 +7,33 @@
 
 var http = require('http');
 var app = require('./server');
+var assetCompress = require('node-minify')
 var server = http.createServer(app);
 
-server.listen(8080, function(){
-  console.log('Application started on port 8080');
-});
+var startUp = function(){
+  server.listen(8080, function(){
+    console.log('Application started on port 8080');
+  });
+};
+
+/**
+ * Compress our css file for production.
+ */
+(function() {
+  var env = process.env.NODE_ENV || 'production'
+  if(env === 'production'){
+    app.locals.cssPath = '/css/main.min.css';
+    return new assetCompress.minify({
+      type: 'yui-css',
+      fileIn: 'application/public/css/main.css',
+      fileOut: 'application/public/css/main.min.css',
+      callback: startUp
+    });
+  }
+  else {
+    app.locals.cssPath = '/css/main.css';
+    startUp()
+  }
+})();
+
+

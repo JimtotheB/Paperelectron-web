@@ -1,21 +1,10 @@
 extends Base
+include mixins
+
+block header
+  +hero()
 
 block pageContent
-  section#hero-section
-    .row
-      .small-12.medium-6.large-7.columns
-        h1 paperElectron
-        h3 Software development and consulting.
-      .small-12.medium-6.large-5.columns
-        .logo
-          img(src="/images/logo_small.png")
-    .row
-      .small-12.columns
-        ul.inline-list
-          li
-            a(href="http://blog.paperelectron.com") blog
-          li
-            a(href="https://github.com/PaperElectron") github
   section#software-section
     .row
       h1 Software.
@@ -35,21 +24,44 @@ block pageContent
               p With a wildcard ssl certificate OctoRP can handle TLS termination before passing the request to a
                 | backend server on a private network. It can also proxy ssl requests directly to a backend if you prefer
                 | to terminate directly on a backend host.
+              ul.inline-list
+                li
+                  a(href="https://github.com/PaperElectron/OctoRP") github
+          li
+            .panel
+              h2 Holdfast
+              p A state based Docker container deployer and manager.
+              h4 Stateful management.
+              p Define the desired state of containers across any number
+                | of host machines, and Holdfast will do its best to maintain that state.
+              h4 Dispatcher + Managers.
+              p Holdfast has a combined Manager/Dispatcher as well as lightweight managers
+                | designed to be run on multiple hosts.
+              ul.inline-list
+                li
+                  a(href="https://github.com/PaperElectron/holdfast") github
+                li
+                  a(href="https://www.npmjs.com/package/holdfast") npm
+
           li
             .panel
               h2 Littoral
-              p Is a self hosted example and demonstration server, useful for hosting a large number
+              p A self hosted example and demonstration server, useful for hosting a large number
                | of totally isolated pages. It supports recursive loading of routes and automatic nesting of pages.
               h4 Database free.
               p Littoral assembles a site structure from the directories you provide, no database needed.
               h4 Easy Customization.
               p Littoral can use any theme you can create, and consists of just a few template files and a css file.
+              ul.inline-list
+                li
+                  a(href="https://github.com/PaperElectron/littoral") github
+                li
+                  a(href="https://www.npmjs.com/package/littoral") npm
+                li
+                  a(href="https://registry.hub.docker.com/u/paperelectron/littoral-docker/") docker
 
-          li
-            .panel
-              h3 OctoRP
-              p is a dynamic reverse proxy that supports evented load balancing and round robin
-               | host addressing.
+
+
 
   section#consulting-section
     .row
@@ -81,10 +93,10 @@ block pageContent
           li
             .panel
               .row
-                .small-3.columns
+                .small-6.small-centered.large-3.large-uncentered.columns
                   a.th(href="https://nodejs.org/")
                     img(src="https://nodejs.org/images/logos/nodejs-green.png", width="200")
-                .small-9.columns
+                .small-12.large-9.columns
                   h3 NodeJS
                   p We feel that Docker or something similar to Docker is the future of distributed
                    | computing. Most of the applications we build are either designed to run in Docker,
@@ -92,10 +104,10 @@ block pageContent
           li
             .panel
               .row
-                .small-3.columns
+                .small-6.small-centered.large-3.large-uncentered.columns
                   a.th(href="https://angularjs.org")
                     img(src="https://angularjs.org/img/AngularJS-large.png", width="200")
-                .small-9.columns
+                .small-12.large-9.columns
                   h3 AngularJS
                   p We feel that Docker or something similar to Docker is the future of distributed
                     | computing. Most of the applications we build are either designed to run in Docker,

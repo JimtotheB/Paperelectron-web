@@ -1,0 +1,14 @@
+extends /Base
+include /mixins
+block header
+  +tophead
+block pageContent
+  section#full-page-section
+    .row
+      .small-12.columns
+        h1 Oops.
+        h1.text-center 404
+        h3.text-center We couldnt find that page.
+        p.text-center
+          a(href="/") Go back?
+

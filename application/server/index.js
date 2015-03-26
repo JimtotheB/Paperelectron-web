@@ -12,5 +12,6 @@
 var app = require('express')();
 var config = require('./expressConfig')(app);
 var routes = require('../routes')(app);
+var errors = require('./errorHandlers')(app);
 
 module.exports = app;

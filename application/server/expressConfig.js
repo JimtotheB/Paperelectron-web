@@ -25,4 +25,6 @@ module.exports = function(app){
   app.use(compress());
   app.use(expressLogger('common'));
   app.use(responseTime());
+
+  app.locals.basedir = app.get('views')
 };

@@ -1,0 +1,13 @@
+extends /Base
+include /mixins
+block header
+  +tophead
+block pageContent
+  section#full-page-section
+    .row
+      .small-12.columns
+        h1 Oh No!
+        h1.text-center #{status}
+        h3.text-center Something broke.
+        a.text-center(href="/") Go back?
+

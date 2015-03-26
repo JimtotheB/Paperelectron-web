@@ -1,6 +1,7 @@
 doctype html
 html
   head
+    title #{title || "PaperElectron"}
     meta(charset="utf-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(name="description" content="Portal for Paper Electron LLC software consulting.")
@@ -8,8 +9,42 @@ html
     meta(name="copyright" content="Paper Electron LLC (c) 2015")
 
     link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.1/css/foundation.min.css')
-    link(rel='stylesheet', href='/css/main.css')
+    link(rel='stylesheet', href=cssPath)
   body
+    block header
+
     block pageContent
+
+    footer#footer
+      .row
+        .small-12.columns
+          ul.small-block-grid-1.large-block-grid-3
+            li
+              ul.inline-list
+                li
+                  a(href="mailto:jim.b@paperelectron.com?subject=Hey,%20I%20Have%20a%20project%20for%20you.")
+                    i.fa.fa-2x.fa-envelope-o
+                li
+                  a(href="https://github.com/PaperElectron")
+                    i.fa.fa-2x.fa-github
+                li
+                  a(href="https://www.linkedin.com/in/JimtotheB")
+                    i.fa.fa-2x.fa-linkedin
+                li
+                  a(href="https://twitter.com/paperElectron")
+                    i.fa.fa-2x.fa-twitter
+                li
+                  a(href='http://blog.paperelectron.com')
+                    i.fa.fa-2x.fa-rss
+            li
+              p.text-center copyright
+                i.fa.fa-copyright
+                span &nbsp;
+                span #{new Date().getFullYear()} Paper Electron LLC
+            li
+              ul.inline-list.center-list
+                li
+                  a(href='/policies/privacy') privacy policy
+
 
     include scripts
