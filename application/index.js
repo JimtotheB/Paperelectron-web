@@ -7,7 +7,8 @@
 
 var http = require('http');
 var app = require('./server');
-var assetCompress = require('node-minify')
+var assetCompress = require('node-minify');
+var fs
 var server = http.createServer(app);
 
 var startUp = function(){
@@ -20,9 +21,9 @@ var startUp = function(){
  * Compress our css file for production.
  */
 (function() {
-  var env = process.env.NODE_ENV || 'production'
-  if(env === 'production'){
-    app.locals.cssPath = '/css/main.min.css';
+  var env = process.env.NODE_ENV || 'production';
+  if(env === 'development'){
+    app.locals.cssPath = '/css/main.css';
     return new assetCompress.minify({
       type: 'yui-css',
       fileIn: 'application/public/css/main.css',
@@ -31,7 +32,7 @@ var startUp = function(){
     });
   }
   else {
-    app.locals.cssPath = '/css/main.css';
+    app.locals.cssPath = '/css/main.min.css';
     startUp()
   }
 })();
