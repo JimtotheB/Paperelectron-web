@@ -7,65 +7,65 @@ block header
 block pageContent
   section#software-section
     .row
-      h1 Software.
+      h1 Open Source Software
       .small-12.columns
         ul.small-block-grid-1.large-block-grid-3
           li
             .panel
-              h2 OctoRP
-              p "A respectably rugged, remarkably reliable, reconfigurable, round-robin, reverse proxy."
-              p OctoRp is a dynamic reverse proxy that supports evented load balancing and round robin
+              h2 Sundry
+              p A dynamically configurable, load balancing, reverse proxy.
+              p Sundry is a dynamic reverse proxy that supports evented load balancing and round robin
                 | host addressing.
               h4 Multiple Paradigms.
-              p OctoRP can be run as a multi site request aggregator serving multiple backends on separate hostnames.
-                | Or it cam be run as a single site load balancer, with dynamic addition and removal of backends
+              p Sundry can be run as a multi site request aggregator serving multiple backends on separate hostnames.
+                | Or it can run as a single site load balancer, with dynamic addition and removal of backends
                 | from a pool of servers.
               h4 SSL Ready.
-              p With a wildcard ssl certificate OctoRP can handle TLS termination before passing the request to a
+              p With a wildcard ssl certificate Sundry can handle TLS termination before passing the request to a
                 | backend server on a private network. It can also proxy ssl requests directly to a backend if you prefer
                 | to terminate directly on a backend host.
               ul.inline-list
                 li
-                  a(href="https://github.com/PaperElectron/OctoRP") github
+                  a(href="https://github.com/PaperElectron/Sundry") github
+                li
+                  a(href="https://www.npmjs.com/package/sundry") npm
           li
             .panel
-              h2 Holdfast
-              p A state based Docker container deployer and manager.
-              h4 Stateful management.
-              p Define the desired state of containers across any number
-                | of host machines, and Holdfast will do its best to maintain that state.
-              h4 Dispatcher + Managers.
-              p Holdfast has a combined Manager/Dispatcher as well as lightweight managers
-                | designed to be run on multiple hosts.
+              h2 Pomegranate
+              p A lightweight web application framework.
+              h4 Recursive Route and Model loading.
+              p Create your Route definitions and pomegranate will load them automatically. CouchDB and SQL model
+               | definitions are loaded the same way.
+              h4 Dependency Injection.
+              p Route dependencies are automatically available via the Magnum DI Injection framework. Adding your own
+                | dependencies is also a trival operation.
               ul.inline-list
                 li
-                  a(href="https://github.com/PaperElectron/holdfast") github
+                  a(href="https://github.com/PaperElectron/pomegranate") github
                 li
-                  a(href="https://www.npmjs.com/package/holdfast") npm
-
+                  a(href="https://www.npmjs.com/package/pomegranate") npm
           li
             .panel
-              h2 Littoral
-              p A self hosted example and demonstration server, useful for hosting a large number
-               | of totally isolated pages. It supports recursive loading of routes and automatic nesting of pages.
-              h4 Database free.
-              p Littoral assembles a site structure from the directories you provide, no database needed.
-              h4 Easy Customization.
-              p Littoral can use any theme you can create, and consists of just a few template files and a css file.
+              h2 Magnum DI
+              p A simple to use Key - Value dependency injection framework.
+              h4 Lightweight.
+              p Magnum DI doesn't try to dictate how you structure your application. Simply add dependencies then pass
+                | a function to the injector and it will replace the parameters with the correct dependencies.
+              h4 Easy Setup and Customization.
+              p Magnum DI can handle plain objects, object factories and constructors. It can be used programically
+               | with "injector.get("myDep")" or by using it to run a function with defined parameters.
               ul.inline-list
                 li
-                  a(href="https://github.com/PaperElectron/littoral") github
+                  a(href="https://github.com/PaperElectron/Magnum-Di") github
                 li
-                  a(href="https://www.npmjs.com/package/littoral") npm
-                li
-                  a(href="https://registry.hub.docker.com/u/paperelectron/littoral-docker/") docker
+                  a(href="https://www.npmjs.com/package/magnum-di") npm
 
 
 
 
   section#consulting-section
     .row
-      h1 Consulting and development focus.
+      h1 Consulting
       .small-12.columns
         ul.small-block-grid-1
           li
@@ -75,40 +75,22 @@ block pageContent
                   a.th(href="/")
                     img(src="/images/logo_small.png")
                 .small-12.large-9.columns
-                  h3 Our focus is on our customers.
-                  p However for new projects, we have found the technologies below to be especially
-                    | suited for developer productivity, ease of integration and testing, and cost.
+                  h3 Our focus is on solutions.
+                  p The world is full of problems that need solving, and we expect that to remain true
+                   | for the foreseeable future. Solving those problems is our passion.
 
+                  p We specialize in developing highly concurrent systems, designed for scale.
+
+  section#development-section
+    .row
+      h1 Development
+      .small-12.columns
+        ul.small-block-grid-1
           li
             .panel
               .row
-                .small-6.small-centered.large-3.large-uncentered.columns
-                  a.th(href="https://www.docker.com/")
-                    img(src="https://d3oypxn00j2a10.cloudfront.net/0.16.0/img/homepage/docker-logo-cutoff.png", width="200")
                 .small-12.large-9.columns
-                  h3 Docker
-                  p We feel that Docker or something similar to Docker is the future of distributed
-                    | computing. Most of the applications we build are either designed to run in Docker,
-                    | or support those that are.
-          li
-            .panel
-              .row
-                .small-6.small-centered.large-3.large-uncentered.columns
-                  a.th(href="https://nodejs.org/")
-                    img(src="https://nodejs.org/images/logos/nodejs-green.png", width="200")
-                .small-12.large-9.columns
-                  h3 NodeJS
-                  p We feel that Docker or something similar to Docker is the future of distributed
-                   | computing. Most of the applications we build are either designed to run in Docker,
-                   | or support those that are.
-          li
-            .panel
-              .row
-                .small-6.small-centered.large-3.large-uncentered.columns
-                  a.th(href="https://angularjs.org")
-                    img(src="https://angularjs.org/img/AngularJS-large.png", width="200")
-                .small-12.large-9.columns
-                  h3 AngularJS
-                  p We feel that Docker or something similar to Docker is the future of distributed
-                    | computing. Most of the applications we build are either designed to run in Docker,
-                    | or support those that are.
+                  h3 Extraordinary ideas require extraordinary implementation.
+                  p When off the shelf software doesnt cut it, we can help design and develop a system that does.
+
+                  p Test driven development, coupled with continuous integration .
