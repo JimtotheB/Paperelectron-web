@@ -27,4 +27,5 @@ module.exports = function(app){
   app.use(responseTime());
 
   app.locals.basedir = app.get('views')
+
 };
